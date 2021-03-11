@@ -1,4 +1,4 @@
-## Interface: 70300
+## Interface: 80300
 ## Author: Varstahl
 ## Title: Sticky Channels 1.5e |cFFFF8888[Varstahl]|r
 ## Notes: Allows to Stick or Unstick chat types, such as Party, Channels and Raid.
