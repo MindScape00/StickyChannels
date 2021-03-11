@@ -1,0 +1,136 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+  <Script file="StickyChannels.lua"/>
+  <Frame name="StickyChannelsSettings" frameStrata="DIALOG" toplevel="true" hidden="true" enableMouse="true" movable="true" parent="UIParent">
+    <Size><AbsDimension x="284" y="420"/></Size>
+    <Anchors><Anchor point="CENTER"/></Anchors>
+
+    <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+       <BackgroundInsets>
+          <AbsInset left="11" right="12" top="12" bottom="11"/>
+       </BackgroundInsets>
+       <TileSize><AbsValue val="32"/></TileSize>
+       <EdgeSize><AbsValue val="32"/></EdgeSize>
+    </Backdrop>
+
+    <Layers>
+       <Layer level="ARTWORK">
+          <Texture file="Interface\DialogFrame\UI-DialogBox-Header">
+             <Size><AbsDimension x="380" y="65"/></Size>
+             <Anchors>
+                <Anchor point="TOP">
+                   <Offset><AbsDimension x="0" y="12"/></Offset>
+                </Anchor>
+             </Anchors>
+          </Texture>
+       </Layer>
+       <Layer level="OVERLAY">
+          <FontString inherits="GameTooltipHeaderText" text="Sticky Channels Config">
+             <Color r="1.0" g="0.5" b="0"/>
+             <Anchors>
+                <Anchor point="TOP" relativeTo="$parent"></Anchor>
+             </Anchors>
+          </FontString>
+       </Layer>
+    </Layers>
+
+	<Frames>
+		<CheckButton name="$parentCheckButton1" inherits="OptionsCheckButtonTemplate" id="1">
+          <Anchors>
+             <Anchor point="TOPLEFT">
+                <Offset><AbsDimension x="20" y="-50"></AbsDimension></Offset>
+             </Anchor>
+          </Anchors>
+          <Scripts><OnClick>StickyChannels_OnCBClick(1);</OnClick></Scripts>
+       </CheckButton>
+		<CheckButton name="$parentCheckButton2" inherits="OptionsCheckButtonTemplate">
+          <Anchors><Anchor point="TOPLEFT" relativeTo="$parentCheckButton1" relativePoint="BOTTOMLEFT"></Anchor></Anchors>
+          <Scripts><OnClick>StickyChannels_OnCBClick(2);</OnClick></Scripts>
+       </CheckButton>
+		<CheckButton name="$parentCheckButton3" inherits="OptionsCheckButtonTemplate">
+          <Anchors><Anchor point="TOPLEFT" relativeTo="$parentCheckButton2" relativePoint="BOTTOMLEFT"></Anchor></Anchors>
+          <Scripts><OnClick>StickyChannels_OnCBClick(3);</OnClick></Scripts>
+       </CheckButton>
+		<CheckButton name="$parentCheckButton4" inherits="OptionsCheckButtonTemplate">
+          <Anchors><Anchor point="TOPLEFT" relativeTo="$parentCheckButton3" relativePoint="BOTTOMLEFT"></Anchor></Anchors>
+          <Scripts><OnClick>StickyChannels_OnCBClick(4);</OnClick></Scripts>
+       </CheckButton>
+		<CheckButton name="$parentCheckButton5" inherits="OptionsCheckButtonTemplate">
+          <Anchors><Anchor point="TOPLEFT" relativeTo="$parentCheckButton4" relativePoint="BOTTOMLEFT"></Anchor></Anchors>
+          <Scripts><OnClick>StickyChannels_OnCBClick(5);</OnClick></Scripts>
+       </CheckButton>
+		<CheckButton name="$parentCheckButton6" inherits="OptionsCheckButtonTemplate">
+          <Anchors><Anchor point="TOPLEFT" relativeTo="$parentCheckButton5" relativePoint="BOTTOMLEFT"></Anchor></Anchors>
+          <Scripts><OnClick>StickyChannels_OnCBClick(6);</OnClick></Scripts>
+       </CheckButton>
+		<CheckButton name="$parentCheckButton7" inherits="OptionsCheckButtonTemplate">
+          <Anchors><Anchor point="TOPLEFT" relativeTo="$parentCheckButton6" relativePoint="BOTTOMLEFT"></Anchor></Anchors>
+          <Scripts><OnClick>StickyChannels_OnCBClick(7);</OnClick></Scripts>
+       </CheckButton>
+		<CheckButton name="$parentCheckButton8" inherits="OptionsCheckButtonTemplate">
+          <Anchors><Anchor point="TOPLEFT" relativeTo="$parentCheckButton7" relativePoint="BOTTOMLEFT"></Anchor></Anchors>
+          <Scripts><OnClick>StickyChannels_OnCBClick(8);</OnClick></Scripts>
+       </CheckButton>
+		<CheckButton name="$parentCheckButton9" inherits="OptionsCheckButtonTemplate">
+          <Anchors><Anchor point="TOPLEFT" relativeTo="$parentCheckButton8" relativePoint="BOTTOMLEFT"></Anchor></Anchors>
+          <Scripts><OnClick>StickyChannels_OnCBClick(9);</OnClick></Scripts>
+       </CheckButton>
+		<CheckButton name="$parentCheckButton10" inherits="OptionsCheckButtonTemplate">
+          <Anchors><Anchor point="TOPLEFT" relativeTo="$parentCheckButton9" relativePoint="BOTTOMLEFT"></Anchor></Anchors>
+          <Scripts><OnClick>StickyChannels_OnCBClick(10);</OnClick></Scripts>
+       </CheckButton>
+		<CheckButton name="$parentCheckButton11" inherits="OptionsCheckButtonTemplate">
+          <Anchors><Anchor point="TOPLEFT" relativeTo="$parentCheckButton10" relativePoint="BOTTOMLEFT"></Anchor></Anchors>
+          <Scripts><OnClick>StickyChannels_OnCBClick(11);</OnClick></Scripts>
+       </CheckButton>
+		<CheckButton name="$parentCheckButton12" inherits="OptionsCheckButtonTemplate">
+          <Anchors><Anchor point="TOPLEFT" relativeTo="$parentCheckButton11" relativePoint="BOTTOMLEFT"></Anchor></Anchors>
+          <Scripts><OnClick>StickyChannels_OnCBClick(12);</OnClick></Scripts>
+       </CheckButton>
+		<Button name="$parentCloseButton" inherits="UIPanelCloseButton">
+			<Size x="25" y="25" />
+			<Anchors>
+				<Anchor point="TOPRIGHT">
+					<Offset x="2" y="2" />
+				</Anchor>
+			</Anchors>
+		</Button>
+		<Frame name="$parentReloadInformation">
+			<Size>
+				<AbsDimension x="275" y="24" />
+			</Size>
+			<Anchors>
+				<Anchor point="BOTTOM">
+					<Offset y="15" />
+				</Anchor>
+			</Anchors>
+			<Layers>
+				<Layer>
+					<FontString name="$parentReloadMessage" font="Fonts\FRIZQT__.TTF" text="Use '/reload' after changing settings for them to take affect">
+						<Anchors>
+							<Anchor point="TOPLEFT" />
+							<Anchor point="BOTTOMRIGHT" />
+						</Anchors>
+						<FontHeight val="12" />
+						<Color r="1" g="0.8196079" b="0" />
+							<Shadow>
+								<Offset>
+									<AbsDimension x="1" y="-1" />
+								</Offset>
+								<Color r="0" g="0" b="0" />
+							</Shadow>
+						</FontString>
+					</Layer>
+				</Layers>
+			</Frame>
+	</Frames>
+
+	<Scripts>
+		<OnLoad>  StickyChannels_OnLoad(self);  tinsert(UISpecialFrames,self:GetName());  self:RegisterForDrag("LeftButton"); </OnLoad>
+		<OnEvent> StickyChannels_OnEvent(self, event, ...); </OnEvent>
+		<OnShow>  PlaySound("GAMEDIALOGOPEN");  </OnShow>
+		<OnHide>  PlaySound("GAMEDIALOGCLOSE"); </OnHide>
+		<OnDragStart>self:StartMoving();</OnDragStart>
+		<OnDragStop>self:StopMovingOrSizing();</OnDragStop>
+    </Scripts>
+  </Frame>
+</Ui>
